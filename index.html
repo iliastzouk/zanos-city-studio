@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zanos City — Studio προς Ενοικίαση | Λευκωσία</title>
-<meta name="description" content="Πλήρως επιπλωμένο studio προς ενοικίαση στο Zanos City, Λευκωσία. €550/μήνα.">
+<title>Zanos City — Studio προς Ενοικίαση | Αγλαντζιά, Λευκωσία</title>
+<meta name="description" content="Πλήρως επιπλωμένο studio ~35-40 τ.μ. προς ενοικίαση στο Zanos City, Αγλαντζιά — απέναντι από το Πανεπιστήμιο Κύπρου. €550/μήνα.">
 <style>
   :root{
     --bg:#faf8f5;
@@ -13,6 +13,8 @@
     --text-soft:#6b6259;
     --accent:#a97a50;
     --accent-dark:#7c5636;
+    --whatsapp:#25b562;
+    --whatsapp-dark:#1c9650;
     --line:#e4dcd0;
     --card:#ffffff;
     --shadow: 0 10px 30px rgba(43,38,32,0.08);
@@ -64,16 +66,16 @@
   /* Hero */
   .hero{
     position:relative;
-    min-height:82vh;
+    min-height:86vh;
     display:flex; align-items:flex-end;
     background:#111;
   }
   .hero img{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.78;
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.85;
   }
   .hero::after{
     content:""; position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(20,16,12,0.15) 0%, rgba(15,12,9,0.55) 65%, rgba(10,8,6,0.85) 100%);
+    background:linear-gradient(180deg, rgba(20,16,12,0.10) 0%, rgba(15,12,9,0.5) 60%, rgba(10,8,6,0.88) 100%);
   }
   .hero-content{
     position:relative; z-index:2; color:#fff;
@@ -92,7 +94,7 @@
     font-weight:800; letter-spacing:-0.5px;
   }
   .hero p.loc{
-    font-size:1.05rem; color:#f2ede6; margin:0 0 26px; opacity:.92;
+    font-size:1.05rem; color:#f2ede6; margin:0 0 26px; opacity:.94;
   }
   .hero-stats{
     display:flex; flex-wrap:wrap; gap:14px; margin-bottom:30px;
@@ -102,7 +104,7 @@
     border:1px solid rgba(255,255,255,0.25);
     padding:8px 14px; border-radius:12px; font-size:.88rem;
   }
-  .hero-actions{display:flex; flex-wrap:wrap; gap:12px;}
+  .hero-actions{display:flex; flex-wrap:wrap; align-items:center; gap:12px;}
   .btn{
     display:inline-flex; align-items:center; gap:8px;
     padding:13px 22px; border-radius:12px; font-weight:600; font-size:.95rem;
@@ -110,6 +112,8 @@
   }
   .btn-primary{background:var(--accent); color:#fff;}
   .btn-primary:hover{background:var(--accent-dark);}
+  .btn-whatsapp{background:var(--whatsapp); color:#fff;}
+  .btn-whatsapp:hover{background:var(--whatsapp-dark);}
   .btn-ghost{background:rgba(255,255,255,0.08); color:#fff; border-color:rgba(255,255,255,0.4);}
   .btn-ghost:hover{background:rgba(255,255,255,0.18);}
   .price-tag{
@@ -128,7 +132,7 @@
   .gallery{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 190px;
+    grid-auto-rows: 200px;
     gap:12px;
   }
   .gallery a{
@@ -138,14 +142,9 @@
     width:100%; height:100%; object-fit:cover; transition:transform .5s ease;
   }
   .gallery a:hover img{transform:scale(1.06);}
-  .gallery a .tag{
-    position:absolute; left:10px; bottom:10px;
-    background:rgba(20,16,12,0.6); color:#fff; font-size:.75rem;
-    padding:5px 10px; border-radius:999px; backdrop-filter:blur(3px);
-  }
-  .gallery a.big{grid-column:span 4; grid-row:span 2;}
+  .gallery a.big{grid-column:span 2; grid-row:span 2;}
   @media (max-width:820px){
-    .gallery{grid-template-columns:repeat(2,1fr); grid-auto-rows:140px;}
+    .gallery{grid-template-columns:repeat(2,1fr); grid-auto-rows:150px;}
     .gallery a{grid-column:span 1 !important;}
     .gallery a.big{grid-column:span 2 !important; grid-row:span 2;}
   }
@@ -172,7 +171,7 @@
 
   /* Location / building */
   .split{
-    display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;
+    display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start;
   }
   .split img{border-radius:var(--radius); box-shadow:var(--shadow);}
   .split .text h2{font-size:1.6rem; margin-top:0;}
@@ -188,7 +187,11 @@
     .split{grid-template-columns:1fr;}
     .split .imgs{order:-1;}
   }
-  .imgs{display:grid; gap:12px;}
+  .map-frame{
+    width:100%; height:340px; border:0; border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+  .map-caption{font-size:.82rem; color:var(--text-soft); margin-top:10px;}
 
   /* Contact / CTA */
   .cta-band{
@@ -225,12 +228,12 @@
   <div class="nav">
     <div class="brand">
       <span class="name">ZANOS CITY</span>
-      <span class="place">Studio · Λευκωσία</span>
+      <span class="place">Studio · Αγλαντζιά, Λευκωσία</span>
     </div>
     <nav class="nav-links">
       <a href="#gallery">Φωτογραφίες</a>
       <a href="#features">Παροχές</a>
-      <a href="#location">Περιοχή</a>
+      <a href="#location">Τοποθεσία</a>
       <a href="#contact">Επικοινωνία</a>
     </nav>
     <a class="nav-cta" href="#contact">Κλείσε ραντεβού</a>
@@ -238,24 +241,22 @@
 </header>
 
 <section class="hero">
-  <img src="images/hero-night.jpg" alt="Είσοδος του συγκροτήματος Zanos City το βράδυ">
+  <img src="images/hero.jpg" alt="Χώρος διαμονής με κρεβάτι, τραπεζάκι και μεγάλη μπαλκονόπορτα">
   <div class="hero-content">
-    <span class="badge">Διαθέσιμο τώρα</span>
+    <span class="badge">Διαθέσιμο τώρα · Απέναντι από το Πανεπιστήμιο Κύπρου</span>
     <h1>Studio προς Ενοικίαση στο Zanos City</h1>
-    <p class="loc">📍 Λευκωσία, Κύπρος · Πλήρως επιπλωμένο</p>
+    <p class="loc">📍 Αγλαντζιά, Λευκωσία · Πλήρως επιπλωμένο · Μεγάλη ιδιωτική βεράντα</p>
     <div class="hero-stats">
-      <span>🛏️ Studio</span>
+      <span>📐 ~35-40 τ.μ.</span>
       <span>🚿 1 Μπάνιο</span>
-      <span>🌇 Μπαλκόνι</span>
-      <span>🛋️ Επιπλωμένο</span>
-      <span>❄️ Air Condition</span>
+      <span>🌇 Γωνιακή βεράντα</span>
+      <span>🅿️ Στεγασμένο πάρκινγκ</span>
+      <span>❄️ A/C</span>
     </div>
     <div class="hero-actions">
-      <div class="btn btn-primary" style="pointer-events:none;">
-        <span class="price-tag">€550 <small>/ μήνα</small></span>
-      </div>
-      <a class="btn btn-ghost" href="tel:99177881">📞 Κλήση: 99177881</a>
-      <a class="btn btn-ghost" href="mailto:iliastzouk@gmail.com">✉️ Email</a>
+      <span class="price-tag">€550 <small>/ μήνα</small></span>
+      <a class="btn btn-primary" href="tel:99177881">📞 Κάλεσε τώρα</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/35799177881" target="_blank" rel="noopener">💬 WhatsApp</a>
     </div>
   </div>
 </section>
@@ -263,16 +264,16 @@
 <section id="gallery">
   <div class="wrap">
     <h2 class="section-title">Φωτογραφίες</h2>
-    <p class="section-sub">Μια ματιά μέσα στο διαμέρισμα — καθιστικό/υπνοδωμάτιο, πλήρως εξοπλισμένη κουζίνα, μπάνιο και μπαλκόνι.</p>
+    <p class="section-sub">Ο χώρος διαμονής με τη βεράντα, η πλήρως εξοπλισμένη κουζίνα, το μπάνιο και το ίδιο το συγκρότημα Zanos City.</p>
     <div class="gallery" id="galleryGrid">
-      <a href="images/bedroom-1.jpg" class="big"><img loading="lazy" src="images/bedroom-1.jpg" alt="Καθιστικό / υπνοδωμάτιο με TV και ντουλάπα"><span class="tag">Καθιστικό</span></a>
-      <a href="images/kitchen-1.jpg"><img loading="lazy" src="images/kitchen-1.jpg" alt="Πλήρως εξοπλισμένη κουζίνα"><span class="tag">Κουζίνα</span></a>
-      <a href="images/bathroom-1.jpg"><img loading="lazy" src="images/bathroom-1.jpg" alt="Μπάνιο με καμπίνα ντους"><span class="tag">Μπάνιο</span></a>
-      <a href="images/bedroom-2.jpg"><img loading="lazy" src="images/bedroom-2.jpg" alt="Κρεβάτι και χώρος καθιστικού"><span class="tag">Υπνοδωμάτιο</span></a>
-      <a href="images/balcony-1.jpg"><img loading="lazy" src="images/balcony-1.jpg" alt="Ιδιωτικό μπαλκόνι με θέα"><span class="tag">Μπαλκόνι</span></a>
-      <a href="images/kitchen-2.jpg"><img loading="lazy" src="images/kitchen-2.jpg" alt="Φούρνος και εστίες κουζίνας"><span class="tag">Κουζίνα</span></a>
-      <a href="images/amenities-2.jpg"><img loading="lazy" src="images/amenities-2.jpg" alt="Κοινόχρηστος κήπος συγκροτήματος"><span class="tag">Κήπος</span></a>
-      <a href="images/exterior-2.jpg"><img loading="lazy" src="images/exterior-2.jpg" alt="Είσοδος κτιρίου Zanos City το βράδυ"><span class="tag">Κτίριο</span></a>
+      <a href="images/overview.jpg" class="big"><img loading="lazy" src="images/overview.jpg" alt="Ευρεία λήψη του studio: κουζίνα, είσοδος και ντουλάπα"></a>
+      <a href="images/storage.jpg"><img loading="lazy" src="images/storage.jpg" alt="TV, κλιματιστικό και ντουλάπες με καθρέφτη"></a>
+      <a href="images/kitchen.jpg"><img loading="lazy" src="images/kitchen.jpg" alt="Πλήρως εξοπλισμένη κουζίνα με ψυγείο, φούρνο, εστίες και πλυντήριο"></a>
+      <a href="images/bathroom.jpg"><img loading="lazy" src="images/bathroom.jpg" alt="Μπάνιο με καμπίνα ντους"></a>
+      <a href="images/balcony.jpg"><img loading="lazy" src="images/balcony.jpg" alt="Ιδιωτική γωνιακή βεράντα με γυάλινο κιγκλίδωμα"></a>
+      <a href="images/courtyard-day.jpg"><img loading="lazy" src="images/courtyard-day.jpg" alt="Θέα στον κοινόχρηστο κήπο και τα γύρω βουνά"></a>
+      <a href="images/exterior-night.jpg"><img loading="lazy" src="images/exterior-night.jpg" alt="Η είσοδος του συγκροτήματος Zanos City το βράδυ"></a>
+      <a href="images/walkway-night.jpg"><img loading="lazy" src="images/walkway-night.jpg" alt="Φωτισμένο μονοπάτι στους κοινόχρηστους κήπους"></a>
     </div>
   </div>
 </section>
@@ -285,7 +286,7 @@
       <div class="feature-card">
         <div class="icon">🛋️</div>
         <h3>Πλήρως επιπλωμένο</h3>
-        <p>Κρεβάτι, καναπές, γραφείο, καρέκλες και ντουλάπα με καθρέφτη.</p>
+        <p>Κρεβάτι, τραπεζάκι, γραφείο με καρέκλες και ντουλάπα με καθρέφτη.</p>
       </div>
       <div class="feature-card">
         <div class="icon">🍳</div>
@@ -293,14 +294,19 @@
         <p>Ψυγείο, φούρνος, εστίες κουζίνας και πλυντήριο ρούχων.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">📺</div>
-        <h3>Smart TV & A/C</h3>
-        <p>Τηλεόραση, κλιματισμός και ίντερνετ έτοιμα για σύνδεση.</p>
+        <div class="icon">📶</div>
+        <h3>Smart Wi-Fi συσκευές</h3>
+        <p>Έξυπνες συσκευές στο σπίτι με σύνδεση Wi-Fi, έτοιμες για χρήση.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">❄️</div>
+        <h3>Κλιματισμός & Smart TV</h3>
+        <p>Air condition και τηλεόραση σε όλο τον χώρο.</p>
       </div>
       <div class="feature-card">
         <div class="icon">🌇</div>
-        <h3>Ιδιωτικό μπαλκόνι</h3>
-        <p>Άνετος εξωτερικός χώρος με θέα στο συγκρότημα.</p>
+        <h3>Μεγάλη γωνιακή βεράντα</h3>
+        <p>Καλυμμένη ιδιωτική βεράντα με γυάλινο κιγκλίδωμα και θέα στον κήπο.</p>
       </div>
       <div class="feature-card">
         <div class="icon">🚿</div>
@@ -308,21 +314,17 @@
         <p>Καμπίνα ντους με θερμοσίφωνα και μοντέρνα είδη υγιεινής.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">🌳</div>
-        <h3>Κοινόχρηστοι κήποι</h3>
-        <p>Φροντισμένοι κήποι και φωτισμένα μονοπάτια στο συγκρότημα.</p>
+        <div class="icon">🅿️</div>
+        <h3>Στεγασμένο πάρκινγκ</h3>
+        <p>Αποκλειστική υπόγεια/στεγασμένη θέση στάθμευσης περιλαμβάνεται.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">🚗</div>
-        <h3>Εύκολη πρόσβαση</h3>
-        <p>Κοντά σε βασικούς δρόμους και υπηρεσίες της Λευκωσίας.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🔑</div>
-        <h3>Άμεσα διαθέσιμο</h3>
-        <p>Έτοιμο για μετακόμιση — κανόνισε επίσκεψη σήμερα.</p>
+        <div class="icon">🎓</div>
+        <h3>Απέναντι από Παν. Κύπρου</h3>
+        <p>Δυνατότητα πεζή μετάβασης — ιδανικό για φοιτητή/φοιτήτρια ή επαγγελματία.</p>
       </div>
     </div>
+    <p style="margin-top:22px; color:var(--text-soft); font-size:.9rem;">🐾 Δεν επιτρέπονται κατοικίδια.</p>
   </div>
 </section>
 
@@ -330,28 +332,40 @@
   <div class="wrap">
     <div class="split">
       <div class="text">
-        <h2>Ζήσε στο Zanos City, Λευκωσία</h2>
-        <p>Σύγχρονο συγκρότημα διαμερισμάτων με φροντισμένους κοινόχρηστους χώρους, φωτισμένα μονοπάτια και πράσινο, σε ήσυχη περιοχή της Λευκωσίας.</p>
+        <h2>Αγλαντζιά, ακριβώς απέναντι από το Πανεπιστήμιο Κύπρου</h2>
+        <p>Το Zanos City βρίσκεται σε εξαιρετική τοποθεσία στην Αγλαντζιά, με δυνατότητα πεζή μετάβασης στο Πανεπιστήμιο Κύπρου. Σύγχρονο συγκρότημα με φροντισμένους κοινόχρηστους κήπους και φωτισμένα μονοπάτια.</p>
         <ul class="amenity-list">
-          <li>Φωτισμένη είσοδος και κοινόχρηστοι χώροι συγκροτήματος</li>
-          <li>Διαμορφωμένος κήπος με ελιές και μονοπάτια</li>
-          <li>Άνετη πρόσβαση σε καταστήματα και βασικούς δρόμους</li>
-          <li>Ήσυχη γειτονιά, ιδανική για μόνιμη διαμονή</li>
+          <li>Απέναντι από το Πανεπιστήμιο Κύπρου — πεζή απόσταση</li>
+          <li>Διαμορφωμένος κοινόχρηστος κήπος με ελιές και μονοπάτια</li>
+          <li>Αποκλειστική στεγασμένη θέση πάρκινγκ</li>
+          <li>Άνετη πρόσβαση σε καταστήματα και βασικούς δρόμους της Λευκωσίας</li>
         </ul>
       </div>
       <div class="imgs">
-        <img src="images/amenities-1.jpg" alt="Φωτισμένο μονοπάτι στο συγκρότημα το βράδυ" loading="lazy">
+        <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Zanos+City+Aglantzia+Nicosia+Cyprus,+University+of+Cyprus&output=embed">
+        </iframe>
+        <p class="map-caption">Zanos City, Αγλαντζιά — απέναντι από το Πανεπιστήμιο Κύπρου.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="courtyard" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <h2 class="section-title">Το συγκρότημα Zanos City</h2>
+    <p class="section-sub">Νεόδμητη πολυκατοικία με φροντισμένους, φωτισμένους κοινόχρηστους χώρους.</p>
+    <img src="images/courtyard-night.jpg" alt="Βραδινή θέα στους φωτισμένους κήπους του συγκροτήματος Zanos City" loading="lazy" style="border-radius:var(--radius); box-shadow:var(--shadow); width:100%;">
   </div>
 </section>
 
 <section id="contact">
   <div class="cta-band">
     <h2>Κλείσε ραντεβού για επίσκεψη</h2>
-    <p>Στούντιο €550/μήνα στο Zanos City, Λευκωσία. Επικοινώνησε μαζί μας για διαθεσιμότητα και περισσότερες λεπτομέρειες.</p>
+    <p>Studio €550/μήνα στο Zanos City, Αγλαντζιά — απέναντι από το Πανεπιστήμιο Κύπρου. Επικοινώνησε μαζί μας για διαθεσιμότητα.</p>
     <div class="cta-contacts">
       <a class="btn btn-primary" href="tel:99177881">📞 99177881</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/35799177881" target="_blank" rel="noopener">💬 WhatsApp</a>
       <a class="btn btn-primary" href="tel:6949102296">📞 6949102296</a>
       <a class="btn btn-ghost" href="mailto:iliastzouk@gmail.com">✉️ iliastzouk@gmail.com</a>
     </div>
@@ -359,7 +373,7 @@
 </section>
 
 <footer>
-  © 2026 Zanos City Studio · Λευκωσία, Κύπρος
+  © 2026 Zanos City Studio · Αγλαντζιά, Λευκωσία, Κύπρος
 </footer>
 
 <div class="lightbox" id="lightbox">
