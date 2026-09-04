@@ -102,6 +102,21 @@
   .btn-ghost:hover{background:rgba(255,255,255,0.18);}
   .price-tag{ font-size:1.5rem; font-weight:800; color:#fff; }
   .price-tag small{font-size:.9rem; font-weight:500; opacity:.8;}
+  .price-group{ display:flex; flex-direction:column; gap:6px; }
+  .available-dot{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:.78rem; font-weight:600; color:#c8f2d8;
+  }
+  .available-dot::before{
+    content:""; width:8px; height:8px; border-radius:50%;
+    background:#3ecf7e; box-shadow:0 0 0 rgba(62,207,126,0.6);
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot{
+    0%{ box-shadow:0 0 0 0 rgba(62,207,126,0.55); }
+    70%{ box-shadow:0 0 0 7px rgba(62,207,126,0); }
+    100%{ box-shadow:0 0 0 0 rgba(62,207,126,0); }
+  }
 
   /* Sections */
   section{padding:60px 0;}
@@ -275,18 +290,21 @@
   <img src="images/hero.jpg" alt="Καναπές-κρεβάτι ανοιχτό σε διπλό, μαύρο τραπεζάκι και μεγάλη μπαλκονόπορτα στο studio">
   <div class="hero-content">
     <span class="badge">✨ ΟΛΟΚΑΙΝΟΥΡΓΙΟ · ΠΟΤΕ ΚΑΤΟΙΚΗΜΕΝΟ</span>
-    <h1>Ολοκαίνουργιο Studio · Πλήρως Επιπλωμένο<br>35 τ.μ. · Μεγάλη Ιδιωτική Βεράντα</h1>
+    <h1>Ολοκαίνουργιο Studio · Πλήρως Επιπλωμένο</h1>
     <p class="loc">📍 Zanos City, Αγλαντζιά, Λευκωσία · Απέναντι από το Πανεπιστήμιο Κύπρου</p>
     <div class="hero-stats">
       <span>📐 35 τ.μ.</span>
       <span>🛋️ Πλήρως επιπλωμένο</span>
       <span>🚿 1 Μπάνιο</span>
-      <span>🌇 Ιδιωτική βεράντα</span>
+      <span>🌇 Μεγάλο Μπαλκόνι</span>
       <span>🅿️ Στεγασμένο πάρκινγκ</span>
       <span>❄️ A/C</span>
     </div>
     <div class="hero-actions">
-      <span class="price-tag">€550 <small>/ μήνα</small></span>
+      <div class="price-group">
+        <span class="available-dot">Διαθέσιμο τώρα</span>
+        <span class="price-tag">€550 <small>/ μήνα</small></span>
+      </div>
       <a class="btn btn-primary" href="tel:+35799177881">📞 Επικοινώνησε μαζί μου</a>
       <a class="btn btn-ghost" href="#gallery">📷 Δες τις φωτογραφίες</a>
     </div>
@@ -299,7 +317,7 @@
       <div class="mark">🔑</div>
       <div>
         <h2>Θα είσαι ο πρώτος του κάτοικος</h2>
-        <p>Το studio αυτό δεν έχει κατοικηθεί ποτέ. Το αγόρασα αρχικά για δική μου χρήση, αλλά τελικά αποφάσισα να το ενοικιάσω. Είναι ολοκαίνουργιο, πλήρως επιπλωμένο, και ενοικιάζεται απευθείας από εμένα — χωρίς μεσίτη.</p>
+        <p>Το studio αυτό δεν έχει κατοικηθεί ποτέ. Το αγόρασα αρχικά για δική μου χρήση, αλλά τελικά αποφάσισα να το ενοικιάσω. Είναι ολοκαίνουργιο, πλήρως επιπλωμένο, και ενοικιάζεται απευθείας από εμένα.</p>
       </div>
     </div>
   </div>
